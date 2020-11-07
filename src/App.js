@@ -2,7 +2,7 @@ import './App.css';
 import React from "react"
 import ContentRight from "./components/contentRight/ContentRight";
 import MapController from "./components/map/MapController"
-import LeftSlideBar from "./components/leftSlideBar/LeftSlideBar";
+import LeftSlideBar from "./components/leftSlideBar/leftSlideBar";
 
 function App() {
   return (

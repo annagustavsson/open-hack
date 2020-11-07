@@ -1,11 +1,12 @@
-import React, { useContext, useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import "./leftSlideBar.modules.css"
 
 function LeftSlideBarController() {
 
 
 
 return (
-    <div>This is from LeftSlideBarController</div>
+    <div class="sidebar">This is from LeftSlideBarController</div>
 )
 }
 
