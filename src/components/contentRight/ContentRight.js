@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 
-function ContentRightController() {
+const ContentRightController = () => {
 
-
-
-return (
-    <div>This is from ContentRightController</div>
-)
+    return (
+        <div>
+            This is from ContentRightController
+        </div>
+    )
 }
 
 export default ContentRightController

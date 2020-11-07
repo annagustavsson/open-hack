@@ -1,15 +1,13 @@
 import './App.css';
 import React from "react"
-import ContentRight from "./components/contentRight/ContentRight";
-import MapController from "./components/map/MapController"
-import LeftSlideBar from "./components/leftSlideBar/leftSlideBar";
+import ContentRight from "./components/ContentRight/contentRight";
+import MapController from "./components/Map/mapController";
+import LeftSlideBar from "./components/LeftSlideBar/leftSlideBar";
 
 function App() {
   return (
     <div className="App">
-      <LeftSlideBar/>
       <MapController/>
-      <ContentRight/>
     </div>
   );
 }

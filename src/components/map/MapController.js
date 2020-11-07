@@ -1,20 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
-function MapController() {
+import classes from './mapController.module.css';
 
-    const [emission, setEmission] = useState("100");
-
-    useEffect(() => {  
-    }, [emission]);
-
-    const updateEmission = () => {
-        setEmission("EttJätteStortTal")
-    }
-
-return (
-    <div>This is from LeftSlideBarController {emission}</div>
-
-)
+const MapController = () => {
+    return (
+        <div className={classes.MapController} >
+            
+        </div>
+    )
 }
 
 export default MapController

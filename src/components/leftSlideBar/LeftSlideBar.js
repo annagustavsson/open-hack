@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from "react";
-import "./leftSlideBar.modules.css"
+import classes from "./leftSlideBar.module.css";
 
-function LeftSlideBarController() {
-
-
-
-return (
-    <div class="sidebar">This is from LeftSlideBarController</div>
-)
+const LeftSlideBarController = () => {
+    return (
+        <div class="sidebar">
+            This is from LeftSlideBarController
+        </div>
+    )
 }
 
-export default LeftSlideBarController
+export default LeftSlideBarController;
