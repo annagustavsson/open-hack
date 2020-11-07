@@ -1,8 +1,9 @@
 import './App.css';
 import React from "react"
-import ContentRight from "./components/contentRight/ContentRight";
-import MapController from "./components/map/MapController"
+import ContentRight from "./components/ContentRight/ContentRight";
+import MapController from "./components/Map/MapController"
 import LeftSlideBar from "./components/leftSlideBar/leftSlideBar";
+import 'bootstrap/dist/css/bootstrap.css';
 
 function App() {
   return (

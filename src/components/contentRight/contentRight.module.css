@@ -1,0 +1,12 @@
+.contentRightHolder {
+  height: 30%; /* Full-height: remove this if you want "auto" height */
+  width: 200px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  margin-top: 110px;
+  margin-right: 20px;
+  right: 0;
+  border: 2px solid black;
+  border-radius: 35px;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+}

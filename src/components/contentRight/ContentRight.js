@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
-
-function ContentRightController() {
-
+import classes from "./contentRight.module.css"
 
 
-return (
-    <div>This is from ContentRightController</div>
-)
+const ContentRight = () => {
+    return (
+        <div className={classes.contentRightHolder}>
+            ContentRight
+        </div>
+    )
 }
 
-export default ContentRightController
+export default ContentRight
