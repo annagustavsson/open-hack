@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 
-import { Canvas, useFrame } from 'react-three-fiber';
+import { useFrame } from 'react-three-fiber';
 import { softShadows, MeshWobbleMaterial } from 'drei';
 import { useSpring, a } from 'react-spring/three';
 
@@ -24,7 +24,7 @@ const SpinningMesh = (props) => {
                 onClick = {() => setExpanded(!expanded)}
                 scale = {propsForScale.scale}
             >
-                <boxBufferGeometry 
+                <boxBufferGeometry
                     attach="geometry"
                     args={props.args}
                 />
@@ -36,21 +36,6 @@ const SpinningMesh = (props) => {
                     factor={1}
                 />
             </a.mesh>
-
-            {/* <mesh>
-                <circleBufferGeometry 
-                    attach="geometry"
-                    args={[2, 10]}
-                />
-
-                <meshStandardMaterial 
-                    attach="material"
-                />
-            </mesh> */}
-
-            {/* <Box>
-                <meshStandardMaterial attach="material" />
-            </Box> */}
         </>
     );
 }
