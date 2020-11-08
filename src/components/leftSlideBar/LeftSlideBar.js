@@ -4,7 +4,7 @@ import RangeSlider from 'react-bootstrap-range-slider';
 
 const LeftSlideBarController = () => {
 
-  const [ inputValue, setInputValue ] = useState(0);
+  const [inputValue, setInputValue ] = useState(0);
   const [carValue, setCarValue] = useState(0); 
   const [bikeValue, setBikeValue] = useState(0);
 
@@ -33,8 +33,7 @@ const LeftSlideBarController = () => {
             max={50}
             value={inputValue}
             onChange={changeEvent => setInputValue(changeEvent.target.value)}/>
-        </div>
-        
+        </div>       
     </div>
     
   );
