@@ -2,12 +2,7 @@ import React, { useState, useEffect } from "react";
 import classes from "./leftSlideBar.module.css"
 import RangeSlider from 'react-bootstrap-range-slider';
 
-const LeftSlideBarController = () => {
-
-  const [inputValue, setInputValue ] = useState(0);
-  const [carValue, setCarValue] = useState(0); 
-  const [bikeValue, setBikeValue] = useState(0);
-
+const LeftSlideBarController = ({inputValue, carValue,  bikeValue, inputValueHandler, carValueHandler, bikeValueHandler}) => {
   useEffect(() => {
     updateDisplayValue();
   }, [inputValue]); //for everytime inputValue is changed updateDisplayValue is called.
@@ -16,11 +11,10 @@ const LeftSlideBarController = () => {
   const updateDisplayValue = () => {
         const cars = 50 + Math.abs(inputValue)
         const bikes = 50 - Math.abs(inputValue)
-        setCarValue(cars)
-        setBikeValue(bikes)
+        carValueHandler(cars)
+        bikeValueHandler(bikes)
       
   }
-
 
   return (
     <div className={classes.sidebar}>
@@ -32,7 +26,7 @@ const LeftSlideBarController = () => {
             min={-50}
             max={50}
             value={inputValue}
-            onChange={changeEvent => setInputValue(changeEvent.target.value)}/>
+            onChange={changeEvent => inputValueHandler(changeEvent.target.value)}/>
         </div>     
     </div>
     
