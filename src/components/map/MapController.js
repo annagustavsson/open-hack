@@ -17,10 +17,10 @@ const MapController = () => {
                 colorManagement
                 camera={{position: [-5, 2, 10], fov: 60}}
             >
-                {/* <Html>
+                <Html>
                     <h1>Hej</h1>
-                </Html> */}
-                <HTMLContent />
+                </Html>
+                {/* <HTMLContent /> */}
             </Canvas>
         </>
     )

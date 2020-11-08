@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 
 import './threeTest.css';
+
+import Model from '../Model/model';
 
 import { Canvas } from 'react-three-fiber';
 import { softShadows, OrbitControls } from 'drei';
@@ -14,7 +16,7 @@ const ThreeTest = () => {
             <Canvas 
                 colorManagement
                 shadowMap
-                camera={{position: [0, 0, 120], fov: 70}}
+                camera={{position: [0, 0, 120], fov: 10}}
             >
                 <ambientLight intensity={1} />
 
@@ -34,7 +36,7 @@ const ThreeTest = () => {
                 <pointLight position={[-10, 0, -20]} intensity={0.5} />
                 <pointLight position={[0, -10, 0]} intensity={1.5} />
 
-                <group>
+                {/* <group>
                     <mesh 
                         receiveShadow
                         rotation={[-Math.PI / 2, 0, 0]} 
@@ -69,8 +71,12 @@ const ThreeTest = () => {
                         color = "#ffa500"
                         speed={10}
                     />
-                </group>
+                </group> */}
 
+                <Suspense fallback={null}>
+                    <Model />
+                </Suspense>
+                
                 <OrbitControls />
             </Canvas>
         </>

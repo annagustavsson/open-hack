@@ -1,13 +1,12 @@
-import './App.scss';
-import React from "react"
-import ContentRight from "./components/ContentRight/contentRight";
-import MapController from "./components/Map/mapController";
-import LeftSlideBar from "./components/LeftSlideBar/leftSlideBar";
+import React, { Suspense } from 'react'
+
+import Model from './components/Map/Model/model';
+import ThreeTest from './components/Map/ThreeTest/threeTest';
 
 function App() {
   return (
-      <MapController/>
+    <ThreeTest />
   );
-}
+  }
 
 export default App;
