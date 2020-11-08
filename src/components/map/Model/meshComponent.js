@@ -1,17 +1,18 @@
-import React from 'react';
+import React, { useRef } from 'react';
 
-import { useGLTF } from '@react-three/drei/useGLTF';
-
-
+import { useSpring, a } from 'react-spring/three';
+import { useFrame } from 'react-three-fiber';
 
 const MeshComponent = (props) => {
-    const { nodes, materials } = useGLTF('/City_miniature2.gltf')
+    const meshElement = useRef(null);
+    useFrame(() => meshElement.current.rotation.y += 0.002);
     
     return (
-        <mesh 
+        <a.mesh 
             castShadow
-            material={materials.Houses}
-            geometry={nodes.Cylinder.geometry} 
+            ref={meshElement} 
+            material={props.material}
+            geometry={props.geometry} 
         />
     )
 }

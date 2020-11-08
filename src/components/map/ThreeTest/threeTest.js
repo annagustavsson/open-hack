@@ -2,12 +2,11 @@ import React, { Suspense } from 'react';
 
 import './threeTest.css';
 
-import Model from '../Model/model';
+import CityModel from '../Model/cityModel';
+import { useGLTF } from '@react-three/drei/useGLTF';
 
 import { Canvas } from 'react-three-fiber';
 import { softShadows, OrbitControls } from 'drei';
-
-import SpinningMesh from './SpinningMesh/spinningMesh';
 softShadows();
 
 const ThreeTest = () => {
@@ -16,7 +15,7 @@ const ThreeTest = () => {
             <Canvas 
                 colorManagement
                 shadowMap
-                camera={{position: [0, 0, 120], fov: 10}}
+                camera={{position: [15, 10, 15], fov: 50}}
             >
                 <ambientLight intensity={1} />
 
@@ -33,48 +32,27 @@ const ThreeTest = () => {
                     shadow-camera-bottom={-10}
                 />
 
-                <pointLight position={[-10, 0, -20]} intensity={0.5} />
-                <pointLight position={[0, -10, 0]} intensity={1.5} />
+                <pointLight position={[-10, 0, -20]} intensity={1} />
+                <pointLight position={[0, -10, 0]} intensity={0.5} />
 
-                {/* <group>
-                    <mesh 
-                        receiveShadow
-                        rotation={[-Math.PI / 2, 0, 0]} 
-                        position={[0, -3, 0]}
+                <Suspense fallback={null}>
+                    {/* <mesh 
+                            receiveShadow
+                            rotation={[-Math.PI / 2, 0, 0]} 
+                            position={[0, -3, 0]}
                     >
                         <planeBufferGeometry 
                             attach="geometry"
-                            args={[100, 100]}
+                            args={[200, 200]}
                         />
 
                         <shadowMaterial 
                             attach="material"
-                            opacity={0.2}
+                            opacity={0.3}
                         />
-                    </mesh>
+                    </mesh> */}
 
-                    <SpinningMesh 
-                        position={[0, 1, 0]} 
-                        args = {[3, 2, 1]}
-                        color = "#f0c900"
-                        speed={0.5}
-                    />
-
-                    <SpinningMesh 
-                        position={[-2, 1, -5]}
-                        color = "#ffa500"
-                        speed={10}
-                    />
-
-                    <SpinningMesh 
-                        position={[5, 1, -2]}
-                        color = "#ffa500"
-                        speed={10}
-                    />
-                </group> */}
-
-                <Suspense fallback={null}>
-                    <Model />
+                    <CityModel />
                 </Suspense>
                 
                 <OrbitControls />
