@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import classes from "./emmissionDisplay.module.css";
 
-const TimerController = () => {
+const CounterController = () => {
   const [seconds, setSeconds] = useState(0);
   const [emmission, setEmmission] = useState(0);
 
@@ -29,4 +29,4 @@ useEffect(() => {
   );
 };
 
-export default TimerController;
+export default CounterController;

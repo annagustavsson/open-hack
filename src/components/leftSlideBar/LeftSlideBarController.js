@@ -33,7 +33,7 @@ const LeftSlideBarController = () => {
             max={50}
             value={inputValue}
             onChange={changeEvent => setInputValue(changeEvent.target.value)}/>
-        </div>       
+        </div>     
     </div>
     
   );
