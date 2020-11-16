@@ -1,0 +1,15 @@
+.emmissionContainer {
+  width: 100%;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.emissionHeader {
+  font-size: 3em;
+  font-weight: 700;
+  font-family: Montserrat;
+  background: -webkit-linear-gradient(-45deg, #c967d5, #31ffca);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
